@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html lang="ru" >
+<head>
+    <meta charset="utf-8" />
+    <title>vue js-hometask2-1</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="css/hometask2-1.css">
+</head>
+<body>
+    <div id="app" class="container">
+        <span class="tab"
+              v-bind:class="{ active: title === currentTab }"
+              v-for="title in tabTitles"
+              v-on:click="currentTab = title">
+            {{ title.toUpperCase() }}
+        </span>
+
+        <section v-show="currentTab === 'Отобразить списком'">
+            <div class="list" v-for="article in articles">
+                <h2>{{ article.title }}</h2>
+                <img class="article_img" :src="article.image" >                
+            </div>
+        </section>
+
+        <section v-show="currentTab === 'Отобразить сеткой'">
+            <div class="grid">
+                <img class="img" v-for="article in articles" :src="article.image" >                
+            </div>
+        </section>
+    </div>
+       
+<script src="js/hometask2-1.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html lang="ru" >
+<head>
+    <meta charset="utf-8" />
+    <title>vue js</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="css/hometask1.css">
+</head>
+<body>
+      <div id="application">
+           <article v-for="cat in cats">
+        
+            <h3> Кличка: {{ cat.name }} </h3>
+            <p>Возраст: {{ cat.age }}</p>
+            <p>Расцветка: {{ cat.color }}</p>
+            <img v-bind:src="cat.img" />
+            <a href="#" class="btn">Подробнее</a>
+
+</article>
+        
+
+    </div>
+
+    
+<script src="js/hometask1.js"></script>
+</body>
+</html>

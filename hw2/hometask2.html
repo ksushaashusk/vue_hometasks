@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html lang="ru" >
+<head>
+    <meta charset="utf-8" />
+    <title>vue js-hometask2</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="css/hometask2.css">
+</head>
+<body>
+      <div id="application">
+        <div v-for="good in sortedByCount" 
+        v-bind:class="{zero: good.count === 0, 'not-many': good.count<20, many: 20<good.count}">
+     <p> {{ good.title }} </p> 
+     <p>Цена: {{ good.price }} р.</p> 
+        </div>
+        
+
+    </div>
+
+    
+<script src="js/hometask2.js"></script>
+</body>
+</html>

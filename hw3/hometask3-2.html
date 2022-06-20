@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html lang="ru" >
+<head>
+    <meta charset="utf-8" />
+    <title>vue js-hw3</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="css/hometask3-2.css">
+</head>
+<body>
+    <h1>Услуги</h1>
+    <form id="app">
+        
+        <ul>
+        <li v-for="service in services" @click="active(service)" :class="{ active: service.active }">
+            {{service.title}} 
+          <p>Стоимость: {{service.price}} р.</p>
+        </li>
+        </ul>
+     <span class="total">
+        Итого: <p>{{total()}}</p>
+     </span>   
+    </form>
+      
+
+    
+<script src="js/hometask3-2.js"></script>
+</body>
+</html>
